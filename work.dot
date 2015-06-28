@@ -1,0 +1,26 @@
+digraph G{
+
+	size = "8, 6";//图片大小
+	main[label="project";shape=box];/*形状*/
+
+	main->parse;
+	parse[label="CMakeFiles";shape=box];
+
+	main->cleanup;
+	cleanup[label="src";shape=box];
+
+	cleanup->execute;
+	execute[label="CMakeLists.txt";color=red];
+	cleanup->execute2;
+	execute2[label="main.cpp"];
+	cleanup->execute3;
+	execute3[label="random_string";shape=box];
+
+	execute3->tail;
+	tail[label="CMakeLists.txt";color=red];
+	execute3->tail2;
+	tail2[label="rand.cpp"];
+	execute3->tail3;
+	tail3[label="rand.h"];
+
+}

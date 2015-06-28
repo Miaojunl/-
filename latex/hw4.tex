@@ -1,0 +1,61 @@
+% 变化相对较大的配置直接放在template内提供修改。
+%
+\documentclass{ctexart}
+
+\input{basic}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+%水印
+\usepackage{draftwatermark}
+\SetWatermarkText{
+	Jimmy Lau
+}%设置水印文字
+\SetWatermarkLightness{0.9}%设置水印亮度
+\SetWatermarkScale{0.5}%设置水印大小
+\SetWatermarkAngle{30}
+
+\begin{document}  \large
+%---------------------------------------Title start
+\begin{titlepage}
+	\title{\Huge 第四弹 设计原则}
+	\author{Jimmy Lau}
+	\maketitle
+	\thispagestyle{empty}
+\end{titlepage}
+%---------------------------------------Title end
+
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{0}
+\clearpage
+
+Tip:
+\begin{itemize}
+\item 开始理解设计模式和设计原则。
+\item 综合应用各种学习到的工具。
+\item deadline：6月27日，23点。
+\end{itemize}
+
+\section{设计模式}
+\begin{itemize}
+	\item 阅读Head First设计模式前两章。
+	\item 创建cmake工程，使用github进行管理（参考第三弹），实现对整数的快速排序，选择排序，冒泡排序，堆排序。考虑使用策略模式，工厂模式。
+	\item 本次作业中，你理解了哪些设计原则（参考Head First）？用自己的语言概括，并保存在工程目录下的ans.txt文件中。
+\end{itemize}
+
+
+
+\section{UML}
+\begin{itemize}
+	\item 阅读《UML类图各符号含义.pdf》，做到能够读懂UML图。
+	\item 尝试使用graphviz画出上一章中工程的类图。
+\end{itemize}
+
+本次作业提交到远程仓库（包括类图），本问只需要提交远程仓库的网址。
+
+\end{document}
+
